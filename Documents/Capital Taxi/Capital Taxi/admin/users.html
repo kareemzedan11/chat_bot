@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Dashboard | Capital Taxi</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="sidebar">
+			<h2>🚖 Admin Panel</h2>
+			<ul>
+				<li><a href="dashboard.html">📊 Dashboard</a></li>
+				<li><a href="users.html">👤 Users</a></li>
+				<li><a href="drivers.html">🚗 Drivers</a></li>
+				<li><a href="trips.html">🛣️ Trips</a></li>
+				<li><a href="complaints.html">⚠️ Complaints</a></li>
+				<li><a href="notifications.html">🔔 Notifications</a></li>
+			</ul>
+		</div>
+		<div class="main-content">
+			<h1>👤 Users</h1>
+			<table id="usersTable">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<!-- Edit User Modal -->
+			<div id="editUserModal" class="modal" style="display: none">
+				<div class="modal-content">
+					<span class="close" onclick="closeEditModal()"
+						>&times;</span
+					>
+					<h2>✍️ Edit User</h2>
+
+					<label for="editName">👤 Full Name</label>
+					<input
+						type="text"
+						id="editName"
+						placeholder="Enter user's full name"
+					/>
+
+					<label for="editEmail">📧 Email Address</label>
+					<input
+						type="email"
+						id="editEmail"
+						placeholder="Enter user's email"
+					/>
+
+					<label for="editPhone">📞 Phone Number</label>
+					<input
+						type="text"
+						id="editPhone"
+						placeholder="Enter user's phone number"
+					/>
+
+					<div class="modal-buttons">
+						<button class="save-btn" onclick="saveUser()">
+							💾 Save Changes
+						</button>
+						<button class="cancel-btn" onclick="closeEditModal()">
+							❌ Cancel
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/users.js"></script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Dashboard | Capital Taxi</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- ✅ Leaflet.js JS -->
+		<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+		<!-- Encoded Polyline Plugin -->
+		<script src="https://unpkg.com/leaflet-plugins/layer/vector/Polyline.encoded.js"></script>
+		<script src="https://unpkg.com/@mapbox/polyline"></script>
+	</head>
+	<body>
+		<div class="sidebar">
+			<h2>🚖 Admin Panel</h2>
+			<ul>
+				<li><a href="dashboard.html">📊 Dashboard</a></li>
+				<li><a href="users.html">👤 Users</a></li>
+				<li><a href="drivers.html">🚗 Drivers</a></li>
+				<li><a href="trips.html">🛣️ Trips</a></li>
+				<li><a href="complaints.html">⚠️ Complaints</a></li>
+				<li><a href="notifications.html">🔔 Notifications</a></li>
+			</ul>
+		</div>
+		<div class="main-content">
+			<h1>📊 Admin Dashboard</h1>
+			<p>Welcome, Admin! Manage users, drivers, and more.</p>
+			<button onclick="logout()">🚪 Logout</button>
+			<h1>🚖 Live Active Trips</h1>
+			<div id="map"></div>
+			<script src="js/dashboard.js"></script>
+		</div>
+	</body>
+	<script src="js/auth.js"></script>
+</html>

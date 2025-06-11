@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Dashboard | Capital Taxi</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins&display=swap" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="sidebar">
+			<h2>🚖 Admin Panel</h2>
+			<ul>
+				<li><a href="dashboard.html">📊 Dashboard</a></li>
+				<li><a href="users.html">👤 Users</a></li>
+				<li><a href="drivers.html">🚗 Drivers</a></li>
+				<li><a href="trips.html">🛣️ Trips</a></li>
+				<li><a href="complaints.html">⚠️ Complaints</a></li>
+				<li><a href="notifications.html">🔔 Notifications</a></li>
+			</ul>
+		</div>
+		<div class="main-content">
+			<h1>🔔 Send Notifications</h1>
+
+			<form id="notificationForm">
+				<label for="role">Send To:</label>
+				<select id="role">
+					<option value="user">Users</option>
+					<option value="driver">Drivers</option>
+				</select>
+
+				<label for="message">Message:</label>
+				<textarea
+					id="message"
+					placeholder="Enter notification message"
+				></textarea>
+
+				<button type="button" onclick="sendNotification()">
+					🚀 Send Notification
+				</button>
+			</form>
+
+			<h2>📜 Notification History</h2>
+			<table id="notificationsTable">
+				<thead>
+					<tr>
+						<th>Recipient</th>
+						<th>Message</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<script src="js/notifications.js"></script>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Dashboard | Capital Taxi</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="sidebar">
+			<h2>🚖 Admin Panel</h2>
+			<ul>
+				<li><a href="dashboard.html">📊 Dashboard</a></li>
+				<li><a href="users.html">👤 Users</a></li>
+				<li><a href="drivers.html">🚗 Drivers</a></li>
+				<li><a href="trips.html">🛣️ Trips</a></li>
+				<li><a href="complaints.html">⚠️ Complaints</a></li>
+				<li><a href="notifications.html">🔔 Notifications</a></li>
+			</ul>
+		</div>
+		<div class="main-content">
+			<h1>🛣️ Trips</h1>
+			<table id="tripsTable">
+				<thead>
+					<tr>
+						<th>User</th>
+						<th>Driver</th>
+						<th>Destination</th>
+						<th>Fare</th>
+						<th>Status</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<div id="tripDetailsModal" class="modal" style="display: none">
+			<div class="modal-content" style="width: 1200px">
+				<span class="close" onclick="closeTripDetailsModal()"
+					>&times;</span
+				>
+				<h2>🗺️ Trip Route Details</h2>
+				<div id="map" style="height: 500px"></div>
+			</div>
+		</div>
+		<script src="https://unpkg.com/@mapbox/polyline"></script>
+		<script src="https://unpkg.com/leaflet-plugins/layer/vector/Polyline.encoded.js"></script>
+		<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+		<script src="js/trips.js"></script>
+	</body>
+</html>
